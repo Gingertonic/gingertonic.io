@@ -20,9 +20,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src='/gintonic.png' className="App-logo" alt="logo" onClick={this.openVideo}/>
-            <video width="320" height="240" controls>
-              <source src="BethSchofield_IntroVideo.mov" type="video/mov">
-              <source src="movie.ogg" type="video/ogg">
+            <video id="introvid" className={this.state.video} onClick={this.closeVideo} controls>
+              <source src="/video/introvid.mp4" type="video/mp4"/>
+              <source src="/video/introvid.ogg" type="video/ogg"/>
             Shucks, your browser doesn't support this... Please enjoy the gin though!
             </video>
           <p>

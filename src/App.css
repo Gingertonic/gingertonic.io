@@ -54,3 +54,29 @@
     transform: rotate(-10deg);
   }
 }
+
+#introvid {
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  z-index: 3;
+  position: absolute;
+  left: 4em;
+  top: 3em;
+  transform: rotateX(15deg);
+  /* border-radius: 15%; */
+}
+
+.closed {
+  width: 1em;
+  height: 0.75em;
+  opacity: 0;
+}
+
+.open {
+  width: 16em;
+  height: 11em;
+  opacity: 0.9;
+  box-shadow: 6px 6px 8px -2px #282c34, 7px 7px 6px -2px #8e4600;
+}
