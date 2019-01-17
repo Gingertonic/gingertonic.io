@@ -3,22 +3,59 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = {
+    video: "closed"
+  }
+
+  openVideo = () => {
+    this.setState({video: "open"})
+  }
+
+  closeVideo = () => {
+    this.setState({video: "closed"})
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src='/gintonic.png' className="App-logo" alt="logo" onClick={this.openVideo}/>
+            <video width="320" height="240" controls>
+              <source src="BethSchofield_IntroVideo.mov" type="video/mov">
+              <source src="movie.ogg" type="video/ogg">
+            Shucks, your browser doesn't support this... Please enjoy the gin though!
+            </video>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            <code>The Gingertonic Studios</code><br/>
+            <code>// coming soon</code>
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+
+          <div id='socials'>
+            <a
+              className="App-link"
+              href="https://twitter.com/GingertonicSt"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img className="social" src='/socials/twitter.svg' alt="twitter"/>
+            </a>
+            <a
+              className="App-link"
+              href="https://github.com/Gingertonic"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img className="social" src='/socials/github.svg' alt="github"/>
+            </a>
+            <a
+              className="App-link"
+              href="https://www.youtube.com/playlist?list=PLbVocVe1GMcGyumY0oPHLfiQQTBl8-6Tg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img className="social" src='/socials/youtube.svg' alt="youtube"/>
+            </a>
+          </div>
         </header>
       </div>
     );
