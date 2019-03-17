@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Socials from './components/Socials';
+import Video from './components/Video';
+import Nav from './components/Nav';
+import MainPage from './components/MainPage';
+import Resume from './components/Resume';
+import Projects from './containers/Projects';
+import Words from './components/Words';
 import './App.css';
 
 class App extends Component {
   state = {
-    video: "closed"
+    video: "closed",
+    view: "Main"
   }
 
   openVideo = () => {
@@ -15,48 +22,31 @@ class App extends Component {
     this.setState({video: "closed"})
   }
 
+  switchView = view => {
+    this.setState({ view })
+  }
+
+  routeInnerView = () => {
+    let view;
+    switch(this.state.view){
+      case "Main": view = <MainPage openVideo={this.openVideo} />; break;
+      case "Words": view = <Words />; break;
+      case "Projects": view = <Projects />; break;
+      case "Resume": view = <Resume />; break;
+      default: return null;
+    }
+    return view
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src='/gintonic.png' className="App-logo" alt="logo" onClick={this.openVideo}/>
-            <video id="introvid" className={this.state.video} onClick={this.closeVideo} controls>
-              <source src="/video/introvid.mp4" type="video/mp4"/>
-              <source src="/video/introvid.ogg" type="video/ogg"/>
-            Shucks, your browser doesn't support this... Please enjoy the gin though!
-            </video>
-          <p>
-            <code>The Gingertonic Studios</code><br/>
-            <code>// coming soon</code>
-          </p>
-
-          <div id='socials'>
-            <a
-              className="App-link"
-              href="https://twitter.com/GingertonicSt"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img className="social" src='/socials/twitter.svg' alt="twitter"/>
-            </a>
-            <a
-              className="App-link"
-              href="https://github.com/Gingertonic"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img className="social" src='/socials/github.svg' alt="github"/>
-            </a>
-            <a
-              className="App-link"
-              href="https://www.youtube.com/playlist?list=PLbVocVe1GMcGyumY0oPHLfiQQTBl8-6Tg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img className="social" src='/socials/youtube.svg' alt="youtube"/>
-            </a>
-          </div>
-        </header>
+        <Nav switchView={this.switchView} />
+        <Video state={this.state.video} close={this.closeVideo}/>
+        <div id="inner-view">
+          {this.routeInnerView()}
+        </div>
+        <Socials />
       </div>
     );
   }
