@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
 .gingertonic-logo {
   margin: 4vh;
   animation: App-logo-spin infinite 5s linear;
@@ -9,6 +11,7 @@ box-shadow: 0px 0px 43px 7px rgba(194,152,46,1);
 }
 
 .App {
+  font-family: 'Amatic SC', cursive;
   text-align: center;
   background-image: url('/banana-desk.jpg');
   min-height: 100vh;
@@ -95,6 +98,38 @@ box-shadow: 0px 0px 43px 7px rgba(194,152,46,1);
 }
 
 #inner-view {
+  display: flex;
   height: 70vh;
   width: 70vw;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+.project-card, .blogpost-card {
+  /* border: 1px solid orange; */
+  /* height: 30vh; */
+  width: 30%;
+}
+
+.project-image, .blogpost-image {
+  height: 30vh;
+  width: 30vh;
+  /* border: 1px solid orange; */
+  object-fit: cover;
+}
+
+#main {
+  display: block;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.75em;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Socials from './components/Socials';
 import Video from './components/Video';
 import Nav from './components/Nav';
+import About from './components/About';
 import MainPage from './components/MainPage';
 import Resume from './components/Resume';
 import Projects from './containers/Projects';
@@ -11,7 +12,7 @@ import './App.css';
 class App extends Component {
   state = {
     video: "closed",
-    view: "Main"
+    view: "Home"
   }
 
   openVideo = () => {
@@ -29,10 +30,11 @@ class App extends Component {
   routeInnerView = () => {
     let view;
     switch(this.state.view){
-      case "Main": view = <MainPage openVideo={this.openVideo} />; break;
-      case "Words": view = <Words />; break;
-      case "Projects": view = <Projects />; break;
+      case "Home": view = <MainPage openVideo={this.openVideo} />; break;
+      case "Writing": view = <Words />; break;
+      case "Coding": view = <Projects />; break;
       case "Resume": view = <Resume />; break;
+      case "About": view = <About />; break;
       default: return null;
     }
     return view
