@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import About from './components/About';
 import MainPage from './components/MainPage';
 import Resume from './components/Resume';
+import Music from './components/Music';
 import Projects from './containers/Projects';
 import Words from './components/Words';
 import './App.css';
@@ -33,6 +34,7 @@ class App extends Component {
       case "Home": view = <MainPage openVideo={this.openVideo} />; break;
       case "Writing": view = <Words />; break;
       case "Coding": view = <Projects />; break;
+      case "Music": view = <Music />; break;
       case "Resume": view = <Resume />; break;
       case "About": view = <About />; break;
       default: return null;

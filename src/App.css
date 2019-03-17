@@ -36,6 +36,7 @@ box-shadow: 0px 0px 43px 7px rgba(194,152,46,1);
   height: 3em;
   width: 3em;
   margin-right: 1em;
+  cursor: alias;
 }
 
 #socials {
@@ -99,10 +100,16 @@ box-shadow: 0px 0px 43px 7px rgba(194,152,46,1);
   margin-bottom: 2vh;
 }
 
-.nav-link {
+.nav-link, .home-nav-link {
   margin: 0 2vw;
   cursor: alias;
 }
+
+.home-nav-link {
+  color: rgb(50,25,0);
+}
+
+
 
 #inner-view {
   display: flex;
@@ -164,4 +171,10 @@ a {
 
 #resume {
   width: 100%;
+}
+
+.music-card {
+  width: 50vw;
+  height: 40vh;
+  margin: 2vw;
 }

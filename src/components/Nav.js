@@ -5,11 +5,12 @@ import OuterLink from './OuterLink';
 const Nav = props => {
   return (
     <div id="nav">
-      <Link to={"About"} switchView={props.switchView} />
-      <Link to={"Resume"} switchView={props.switchView} />
-      <Link to={"Home"} switchView={props.switchView} />
+      <Link to={"Home"} class="home-nav-link" switchView={props.switchView} />
+      <Link to={"About"} class="nav-link" switchView={props.switchView} />
+      <Link to={"Coding"} class="nav-link" switchView={props.switchView} />
+      <Link to={"Music"} class="nav-link" switchView={props.switchView} />
       <OuterLink to={"Writing"} url={"https://medium.com/@bethmschofield"} />
-      <Link to={"Coding"} switchView={props.switchView} />
+      <Link to={"Resume"} class="nav-link" switchView={props.switchView} />
     </div>
   )
 }
