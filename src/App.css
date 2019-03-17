@@ -48,14 +48,20 @@ box-shadow: 0px 0px 43px 7px rgba(194,152,46,1);
   0% {
     transform: rotate(-3deg);
   }
+  5% {
+    transform: rotate(-2.5deg);
+  }
   45% {
     transform: rotate(2deg)
   }
   50% {
     transform: rotate(3deg);
   }
+  55% {
+    transform: rotate(2deg);
+  }
   95% {
-    transform: rotate(-2deg)
+    transform: rotate(-2.5deg)
   }
   100% {
     transform: rotate(-3deg);
@@ -95,6 +101,7 @@ box-shadow: 0px 0px 43px 7px rgba(194,152,46,1);
 
 .nav-link {
   margin: 0 2vw;
+  cursor: alias;
 }
 
 #inner-view {
@@ -111,16 +118,14 @@ box-shadow: 0px 0px 43px 7px rgba(194,152,46,1);
 }
 
 .project-card, .blogpost-card {
-  /* border: 1px solid orange; */
-  /* height: 30vh; */
-  width: 30%;
+  width: 50%;
 }
 
 .project-image, .blogpost-image {
-  height: 30vh;
-  width: 30vh;
-  /* border: 1px solid orange; */
+  height: 20vh;
+  width: 20vh;
   object-fit: cover;
+  box-shadow: 2px 2px 2px -2px #282c34, 4px 4px 3px -2px #8e4600;
 }
 
 #main {
@@ -136,8 +141,23 @@ a {
   font-size: 0.75em;
 }
 
-.bio-para {
+.outer-nav{
+  font-size: 1em;
+  color: white;
+  cursor: alias;
+}
+
+.bio-para, .proj-desc  {
   width: 100%;
   color: black;
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px darkorange, 0 0 40px #282c34;
+}
+
+#blog-header {
+  width: 100%;
+}
+
+.proj-desc {
+  font-size: 0.7em;
+  margin: 0;
 }
