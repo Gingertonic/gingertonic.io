@@ -3,7 +3,7 @@ import React from 'react'
 const Resume = props => {
   return (
     <React.Fragment>
-      <p>Resume yeah</p>
+      <img id="resume" src="bethSchofield_cv_1812_for_web.jpg" alt="resume"/>
     </React.Fragment>
   )
 }

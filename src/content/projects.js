@@ -1,7 +1,7 @@
 const projects =  [
     {
       name: "Inspaural",
-      url: "http://www.inspaural.heroku-app.com",
+      url: "http://www.inspaural.herokuapp.com",
       image: "https://media.giphy.com/media/pHXGCfTPsHKIyGrjkq/giphy.gif",
       description: "Design your own aural inspiration!",
       stack: "ReactJS, Rails API, PostgreSQL",
@@ -9,7 +9,7 @@ const projects =  [
     },
     {
       name: "Scale This",
-      url: "http://www.scale-this.heroku-app.com",
+      url: "http://www.scale-this.herokuapp.com",
       image: "https://media.giphy.com/media/46zGtlFCNsOVNLY6PA/giphy.gif",
       description: "Kepp track of your musical scale practice",
       stack: "JQuery, Rails, PostgreSQL, WebAudio API",
