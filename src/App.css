@@ -106,6 +106,8 @@ box-shadow: 0px 0px 43px 7px rgba(194,152,46,1);
   flex-wrap: wrap;
   scroll-behavior: smooth;
   overflow: auto;
+  background-color: rgba(255,120,0,0.4);
+  padding: 1vw;
 }
 
 .project-card, .blogpost-card {
@@ -132,4 +134,10 @@ box-shadow: 0px 0px 43px 7px rgba(194,152,46,1);
 a {
   text-decoration: none;
   font-size: 0.75em;
+}
+
+.bio-para {
+  width: 100%;
+  color: black;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px darkorange, 0 0 40px #282c34;
 }

@@ -1,9 +1,11 @@
 import React from 'react'
+import bio from '../content/bio'
 
 const About = props => {
+  const renderBio = bio.map(para => <p className="bio-para">{para}</p>)
   return (
     <React.Fragment>
-      <p>iuBFbdklbslkjDCLKjdckjsndc;kjsndc;jknsd;kcj;skdjn;JDNJnd;ejndEND;end;jeND</p>
+      {renderBio}
     </React.Fragment>
   )
 }
